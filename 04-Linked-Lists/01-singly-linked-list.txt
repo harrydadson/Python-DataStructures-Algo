@@ -1,0 +1,53 @@
+# each node contains a single link field & allows for complete traversal
+# from a distinctive first node to the last
+
+class ListNode:
+
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+     # Traversing a linked list
+
+    def traversal(head):
+        currNode = head
+        while currNode is not None:
+            print currNode.data
+            currNode = currNode.next
+
+     # Searching a linked list
+
+    def unorderedSearch(head, target):
+        currNode = head
+        while currNode is not None and currNode.data != target:
+            currNode = currNode.next
+        return currNode is not None 
+
+     # Prepending a node to the linked list
+
+    newNode = listNode(item)
+    newNode.next = head 
+    head = newNode
+
+     # Removing a node from alinked list O(n)
+
+    predNode = None
+    currNode = head
+    while currNode is not None and currNode.data != target:
+        predNode = currNode
+        currNode = currNode.next
+
+    if currNode in not None:
+        if currNode is head:
+            head = currNode.next
+        else:
+            predNode.next = currNode.next     
+
+
+
+    a = ListNode(11)
+    b = ListNode(52)
+    c = ListNode(18)
+
+    a.next = b
+    b.next = c
